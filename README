@@ -1,0 +1,4 @@
+You need to install the firebase first
+
+npm install firebase --save
+npm install git+https://github.com/angular/angularfire2.git
