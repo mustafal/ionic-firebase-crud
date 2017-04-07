@@ -7,6 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AngularFireModule } from 'angularfire2';
+import { AddUserPage } from '../pages/add-user/add-user';
+
 
 export const firebaseConfig = {
    apiKey: "AIzaSyDzWiWJCGhbfX5IPFgyEH9GgpsLVgLnvwM",
@@ -20,7 +22,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    AddUserPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -29,7 +32,8 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    AddUserPage
   ],
   providers: [
     StatusBar,
