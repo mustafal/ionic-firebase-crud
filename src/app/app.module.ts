@@ -11,12 +11,7 @@ import { AddUserPage } from '../pages/add-user/add-user';
 
 
 export const firebaseConfig = {
-   apiKey: "AIzaSyDzWiWJCGhbfX5IPFgyEH9GgpsLVgLnvwM",
-    authDomain: "my-ionic-project-93b1a.firebaseapp.com",
-    databaseURL: "https://my-ionic-project-93b1a.firebaseio.com",
-    projectId: "my-ionic-project-93b1a",
-    storageBucket: "my-ionic-project-93b1a.appspot.com",
-    messagingSenderId: "1010402229824"
+   //Your API Key
 }
 
 @NgModule({

@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
-
-import { NavController, AlertController, ActionSheetController } from 'ionic-angular';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { ActionSheetController, AlertController, NavController } from 'ionic-angular';
 import { AddUserPage } from '../add-user/add-user';
-
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'page-home',
@@ -53,7 +51,26 @@ export class HomePage {
   }
 
   removeSong(songId: string) {
-    this.songs.remove(songId);
+    let confirm = this.alertctrl.create({
+      title: 'Are You sure?',
+      message: 'Do you agree to Delete this song?',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+          
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+          this.songs.remove(songId);
+          }
+        }
+      ]
+    });
+    confirm.present();
+    
   }
 
   updateSong(songId, songTitle, songArtist) {
@@ -91,5 +108,4 @@ export class HomePage {
     });
     prompt.present();
   }
-
 }
